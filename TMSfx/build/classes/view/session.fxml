@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.VBox?>	
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<VBox styleClass="background" prefHeight="300.0" prefWidth="600.0" spacing="50" 
+      xmlns:fx="http://javafx.com/fxml" >    
+    
+  <Label text="Put your assignment here!"/>    
+  <stylesheets>
+        <URL value="@tmsfx.css"/>
+  </stylesheets>
+    
+    
+</VBox>

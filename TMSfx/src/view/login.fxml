@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.GridPane?>	
+<?import javafx.geometry.Insets?>
+
+	
+<GridPane xmlns:fx="http://javafx.com/fxml/1" 
+          alignment="CENTER" hgap="5" vgap="10" styleClass="background" prefHeight="200.0" prefWidth="400.0">	
+    
+   
+</GridPane>

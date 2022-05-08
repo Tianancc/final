@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox xmlns:fx="http://javafx.com/fxml"alignment="center"
+      styleClass="background" spacing="10" prefHeight="300.0" prefWidth="350.0">
+   
+    
+    
+</VBox>
+
