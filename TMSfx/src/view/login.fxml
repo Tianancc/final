@@ -1,14 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import java.lang.*?>
 <?import java.net.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
-<?import javafx.scene.layout.GridPane?>	
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.geometry.Insets?>
 
-	
-<GridPane xmlns:fx="http://javafx.com/fxml/1" 
-          alignment="CENTER" hgap="5" vgap="10" styleClass="background" prefHeight="200.0" prefWidth="400.0">	
-    
-   
+<GridPane alignment="CENTER" hgap="5" prefHeight="240.0" prefWidth="400.0" styleClass="background" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+    <stylesheets>
+        <URL value="@tmsfx.css" />
+    </stylesheets>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="203.0" prefWidth="541.0">
+         <children>
+            <Label layoutX="5.0" layoutY="-8.0" styleClass="label-h2" text="Login" />
+            <Label layoutX="5.0" layoutY="35.0" styleClass="label-opac" text="Email:" />
+            <Label layoutX="5.0" layoutY="64.0" styleClass="label-opac" text="Password:" />
+            <TextField fx:id="emailField" layoutX="143.0" layoutY="40.0" prefHeight="23.0" prefWidth="173.0" />
+            <Label fx:id="loginError" layoutX="128.0" layoutY="113.0" styleClass="label-error" />
+            <PasswordField fx:id="passwordField" layoutX="143.0" layoutY="70.0" prefHeight="23.0" prefWidth="173.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="98.0" prefWidth="350.0" GridPane.rowIndex="1">
+         <children>
+            <Button fx:id="loginCancle" layoutX="217.0" layoutY="7.0" mnemonicParsing="false" onAction="#loginCancle" text="Cancle" />
+            <Button fx:id="loginOK" layoutX="105.0" layoutY="7.0" mnemonicParsing="false" onAction="#loginOK" text="OK" />
+         </children>
+      </AnchorPane>
+   </children>
 </GridPane>

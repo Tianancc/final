@@ -1,16 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import java.lang.*?>
 <?import java.net.*?>
 <?import java.util.*?>
-<?import javafx.scene.*?>	
-<?import javafx.scene.layout.VBox?>	
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.geometry.*?>
 
-<VBox styleClass="background" prefHeight="400.0" prefWidth="600.0" spacing="20" 
-      xmlns:fx="http://javafx.com/fxml/1" >
+<VBox prefHeight="655.0" prefWidth="422.0" spacing="20" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentController">
     <padding>
-        <Insets top="10" bottom="10" left="5" right="5" />
+        <Insets bottom="10" left="5" right="5" top="10" />
     </padding>
-   
+    <stylesheets>
+        <URL value="@tmsfx.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane prefHeight="244.0" prefWidth="495.0" styleClass="header">
+         <children>
+            <Label layoutX="100.0" layoutY="14.0" styleClass="label-h2" text="Personal Details" />
+            <Label layoutX="100.0" layoutY="58.0" styleClass="label-opac" text="Name:" />
+            <Label layoutX="100.0" layoutY="92.0" styleClass="label-opac" text="Email:" />
+            <Label layoutX="100.0" layoutY="126.0" styleClass="label-opac" text="Phone:" />
+            <Label layoutX="100.0" layoutY="160.0" styleClass="label-opac" text="Address:" />
+            <TextField fx:id="nameField" layoutX="226.0" layoutY="64.0" prefHeight="23.0" prefWidth="200.0" />
+            <TextField fx:id="emailField" layoutX="226.0" layoutY="98.0" prefHeight="23.0" prefWidth="200.0" />
+            <TextField fx:id="phoneField" layoutX="226.0" layoutY="132.0" prefHeight="23.0" prefWidth="200.0" />
+            <TextField fx:id="addressField" layoutX="226.0" layoutY="166.0" prefHeight="23.0" prefWidth="200.0" />
+         </children>
+      </AnchorPane>
+      <Line endX="250.0" startX="-250.0" stroke="WHITE" />
+      <AnchorPane prefHeight="337.0" prefWidth="601.0" styleClass="header">
+         <children>
+            <Label layoutX="100.0" layoutY="14.0" styleClass="label-h2" text="Tuition Details" />
+            <Label layoutX="100.0" layoutY="160.0" styleClass="label-opac" text="Scholarship:" />
+            <Label layoutX="100.0" layoutY="126.0" styleClass="label-opac" text="Credits:" />
+            <Label layoutX="100.0" layoutY="92.0" styleClass="label-opac" text="Type" />
+            <Label layoutX="100.0" layoutY="58.0" styleClass="label-opac" text="Student ID" />
+            <Label layoutX="100.0" layoutY="194.0" styleClass="label-opac" text="Deduction:" />
+            <TextField fx:id="IDField" layoutX="224.0" layoutY="64.0" prefHeight="23.0" prefWidth="200.0" />
+            <TextField fx:id="typeField" layoutX="224.0" layoutY="98.0" prefHeight="23.0" prefWidth="200.0" />
+            <TextField fx:id="creditsField" layoutX="224.0" layoutY="132.0" prefHeight="23.0" prefWidth="200.0" />
+            <TextField fx:id="scholarshipField" layoutX="224.0" layoutY="166.0" prefHeight="23.0" prefWidth="200.0" />
+            <TextField fx:id="deductionField" layoutX="224.0" layoutY="200.0" prefHeight="23.0" prefWidth="200.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="79.0" prefWidth="580.0">
+         <children>
+            <Button fx:id="addButton" layoutX="85.0" layoutY="3.0" mnemonicParsing="false" onAction="#add" text="Add" />
+            <Button fx:id="updateButton" layoutX="200.0" layoutY="3.0" mnemonicParsing="false" onAction="#update" text="Update" />
+            <Button fx:id="closeButton" layoutX="315.0" layoutY="3.0" mnemonicParsing="false" onAction="#close" text="Close" />
+         </children>
+      </AnchorPane>
+   </children>
 </VBox>

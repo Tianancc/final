@@ -10,6 +10,8 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
+import java.math.BigDecimal;
+
 public class Student {
     private StringProperty name;
     private StringProperty email;
@@ -70,8 +72,9 @@ public class Student {
         this.scholarship.set(scholarship);
         if (deductionCode.equals("2022AUT"))
             this.deduction.bind(this.totalFee.multiply(this.deductionRate));
-        else 
-            this.deduction.set(0.00);
+        else
+            this.deduction = new SimpleDoubleProperty();
+            this.deduction.set(new BigDecimal(deductionCode).doubleValue());
     }
     
     public void setFaculty(Faculty e){

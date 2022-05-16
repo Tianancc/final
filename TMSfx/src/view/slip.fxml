@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
 <?import java.lang.*?>
 <?import java.net.*?>
 <?import java.util.*?>
@@ -8,16 +11,47 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 
-<GridPane prefHeight="338.0" prefWidth="600.0" styleClass="background" alignment="CENTER"  
-          xmlns:fx="http://javafx.com/fxml/1" >
-    <padding>
-        <Insets top="10" bottom="10" left="10" right="10" />
-    </padding>
-    <columnConstraints>
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="40.0" percentWidth="40.0" prefWidth="40.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" percentWidth="30.0" prefWidth="30.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="40.0" percentWidth="40.0" prefWidth="40.0" />
-        <ColumnConstraints hgrow="SOMETIMES" minWidth="30.0" percentWidth="30.0" prefWidth="30.0" />
-    </columnConstraints>
-    
-</GridPane>
+<VBox prefHeight="300.0" prefWidth="643.0" spacing="50" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SlipController">
+   <children>
+      <AnchorPane prefHeight="406.0" prefWidth="623.0">
+         <children>
+            <Label layoutX="32.0" layoutY="14.0" styleClass="label-h2" text="Tuition Slip:" />
+            <GridPane alignment="CENTER" layoutX="22.0" layoutY="58.0" prefHeight="46.0" prefWidth="580.0" styleClass="background">
+                <padding>
+                    <Insets bottom="10" left="10" right="10" top="10" />
+                </padding>
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="40.0" percentWidth="40.0" prefWidth="40.0" />
+                    <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="30.0" percentWidth="30.0" prefWidth="30.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="40.0" percentWidth="40.0" prefWidth="40.0" />
+                    <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="30.0" percentWidth="30.0" prefWidth="30.0" />
+                </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+               <children>
+                  <Label text="Credits:" GridPane.rowIndex="1" />
+                  <Label text="Net Fee:" GridPane.rowIndex="3" />
+                  <Label text="Pay Per Credit:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label text="Scholarship:" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Label text="Deduction:" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Text fx:id="creditsText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-out" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Text fx:id="totalFeeText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-out" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Text fx:id="netFeeText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-out" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Text fx:id="payPerCreditText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-out" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Text fx:id="scholarshipText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-out" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Text fx:id="deductionText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-out" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <Label text="TotalFee:" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <Button fx:id="closeButton" layoutX="260.0" layoutY="185.0" mnemonicParsing="false" onAction="#close" text="Close" />
+         </children></AnchorPane>
+   </children>
+    <stylesheets>
+        <URL value="@tmsfx.css" />
+    </stylesheets>
+</VBox>

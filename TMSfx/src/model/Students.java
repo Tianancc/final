@@ -23,12 +23,9 @@ public class Students {
                 new Student("Monica Shwarz", "monica.s@uts.com", "92241188", "155 Jones St. Sydney 2001", "13859610", "Part-Time", 24,0, "2022AUT")
         );
         current.addAll(students);
-        students.addListener(new ListChangeListener<Student>() {
-            @Override
-            public void onChanged(javafx.collections.ListChangeListener.Change<? extends Student> c) {
-                current.clear();
-                current.addAll(students);
-            }
+        students.addListener((ListChangeListener<Student>) c -> {
+            current.clear();
+            current.addAll(students);
         });
     }
 
@@ -76,7 +73,7 @@ public class Students {
 
         students.forEach((Student p) -> {
             try {
-                if ((p.hasName(name)) || (p.hasEmail(email))) {
+                if ((p.hasName(name)) && (p.hasEmail(email))) {
                     temp.add(p);
                 }
             } catch (NumberFormatException e) {
